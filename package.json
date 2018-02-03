@@ -1,0 +1,33 @@
+{
+  "name": "rollup-plugin-jsy-babel",
+  "version": "1.0.0",
+  "description": "Babel configuration for using JSY in rollup",
+  "license": "MIT",
+  "author": "Shane Holloway",
+  "homepage": "https://github.com/shanewholloway/rollup-plugin-jsy-babel#readme",
+  "main": "dist/rollup-plugin-jsy-babel.cjs.js",
+  "module": "dist/rollup-plugin-jsy-babel.esm.js",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shanewholloway/rollup-plugin-jsy-babel.git"
+  },
+  "keywords": [
+    "rollup",
+    "rollup-plugin"
+  ],
+  "dependencies": {
+    "rollup-plugin-babel": "^3.0.2"
+  },
+  "devDependencies": {
+    "rollup": "^0.55.3"
+  },
+  "scripts": {
+    "build": "rollup --config",
+    "watch": "npm -s run build -- --watch",
+    "pretest": "npm -s run build",
+    "test": "true"
+  }
+}
