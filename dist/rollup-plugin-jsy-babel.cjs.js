@@ -13,7 +13,11 @@ const default_config = { exclude: 'node_modules/**', babelrc: false };
 
 function jsy_babel(config) {
   config = Object.assign({}, default_config, config);
-  config.presets = [jsy_babel.jsy_preset].concat(config.presets || []);
+
+  const jsy = jsy_babel.jsy_preset.slice();
+  jsy[1] = Object.assign({}, jsy[1], config.jsy);
+
+  config.presets = [jsy].concat(config.presets || []);
 
   const rpi = rpi_babel(config);
   rpi.name = 'jsy-babel';
