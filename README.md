@@ -18,6 +18,7 @@ export default [
   { input: 'code/index.jsy',
     output: [
       { file: pkg.main, format: 'cjs', exports:'named', sourcemap },
+      { file: pkg.browser, format: 'umd', name: pkg.name, exports:'named', sourcemap },
       { file: pkg.module, format: 'es', sourcemap }],
     plugins, external },
 ]
@@ -26,9 +27,10 @@ export default [
 in `package.json` :
 ```json
 { …
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "files": [ "dist/", "code/" ],
+  "main": "cjs/index.js",
+  "module": "esm/index.mjs",
+  "browser": "umd/index.js",
+  "files": [ "cjs/", "esm/", "umd/" ],
 
   "dependencies": { },
 
@@ -42,7 +44,7 @@ in `package.json` :
   "babel": { "presets": ["jsy/lean"] },
 
   "scripts": {
-    "clean": "rm -rf ./dist/*",
+    "clean": "rm -rf ./cjs/* ./esm/* ./umd/*",
     "build": "rollup --config",
     "watch": "npm -s run build -- --watch",
     "pretest": "npm -s run build",
