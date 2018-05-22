@@ -15,8 +15,8 @@ const plugins = [rpi_jsy()]
 const external = []
 
 export default [
-	{ input: 'code/index.jsy',
-		output: [
+  { input: 'code/index.jsy',
+    output: [
       { file: pkg.main, format: 'cjs', exports:'named', sourcemap },
       { file: pkg.module, format: 'es', sourcemap }],
     plugins, external },
@@ -35,8 +35,8 @@ in `package.json` :
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-jsy": "^0.9.4",
-    "rollup": "^0.55.3",
-    "rollup-plugin-jsy-babel": "^1.0.0"
+    "rollup": "^0.59.2"
+    "rollup-plugin-jsy-babel": "^2.1.2"
   },
 
   "babel": { "presets": ["jsy/lean"] },

@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-jsy-babel",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Babel configuration for using JSY in rollup",
   "license": "MIT",
   "author": "Shane Holloway",
@@ -19,10 +19,10 @@
     "rollup-plugin"
   ],
   "dependencies": {
-    "rollup-plugin-babel": "^3.0.2"
+    "rollup-plugin-babel": "^3.0.4"
   },
   "devDependencies": {
-    "rollup": "^0.56.3"
+    "rollup": "^0.59.2"
   },
   "peerDependencies": {
     "babel-preset-jsy": "*"
