@@ -29,6 +29,9 @@ configs.push({
 
 ```json
 { …
+  "main": "cjs/index.js",
+  "module": "esm/index.mjs",
+  "browser": "umd/index.js",
   "files": [ "cjs/", "esm/", "umd/" ],
 
   "dependencies": { },
