@@ -22,7 +22,7 @@ const direct = [
 function add_jsy(src_filename) {
   const {name} = path_parse(src_filename)
   configs.push({
-    input: filename,
+    input: src_filename,
     output: [
       { file: `cjs/${name}.js`, format: 'cjs', exports:'named', sourcemap },
       { file: `umd/${name}.js`, format: 'umd', name, exports:'named', sourcemap },
