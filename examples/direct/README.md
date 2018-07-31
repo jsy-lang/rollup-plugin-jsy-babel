@@ -1,6 +1,21 @@
 # Direct file use of rollup-plugin-jsy-babel
 
-### in `rollup.config.js` :
+Configuration for using [JSY](https://github.com/jsy-lang/jsy-lang-docs#readme) in [RollupJS](https://rollupjs.org) via [Babel](https://babeljs.io) 6.x.
+
+##### NPM Install
+
+```bash
+# optional; could also use `npm init .`
+$ echo '{"private": true}' > package.json.
+
+# install devDependencies for JSY and RollupJS
+$ npm install -D \
+    babel-core babel-cli \
+    rollup rollup-plugin-jsy-babel \
+    babel-preset-jsy
+```
+
+##### Add `rollup.config.js` with:
 
 ```javascript
 import {parse as path_parse} from 'path'
@@ -32,23 +47,11 @@ function add_jsy(src_filename) {
 }
 ```
 
-### in `package.json` :
+##### Add `files` and `scripts` to `package.json` :
 
 ```json
-{ …
+{
   "files": [ "cjs/", "esm/", "umd/" ],
-
-  "dependencies": { },
-
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-jsy": "^0.11.2",
-    "rollup": "^0.63.4",
-    "rollup-plugin-jsy-babel": "^2.1.2"
-  },
-
-  "babel": { "presets": ["jsy/lean"] },
-
   "scripts": {
     "clean": "rm -rf ./cjs/* ./esm/* ./umd/*",
     "build": "rollup --config",
@@ -58,4 +61,3 @@ function add_jsy(src_filename) {
   }
 }
 ```
-
