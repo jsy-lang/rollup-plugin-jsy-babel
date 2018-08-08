@@ -6,7 +6,7 @@ Configuration for using [JSY](https://github.com/jsy-lang/jsy-lang-docs#readme) 
 
 ```bash
 # optional; could also use `npm init .`
-$ echo '{"private": true}' > package.json.
+$ echo '{"private": true}' > package.json
 
 # install devDependencies for JSY and RollupJS
 $ npm install -D \
@@ -18,7 +18,6 @@ $ npm install -D \
 ##### Add `rollup.config.js` with:
 
 ```javascript
-import {parse as path_parse} from 'path'
 import rpi_jsy from 'rollup-plugin-jsy-babel'
 
 const configs = []
@@ -27,6 +26,10 @@ export default configs
 const sourcemap = 'inline'
 const plugins = [rpi_jsy()]
 const external = []
+
+// Allow Node module resolution -- https://github.com/rollup/rollup-plugin-node-resolve
+/// import rpi_resolve from 'rollup-plugin-node-resolve'
+/// plugins.push(rpi_resolve({main: true, browser: true, modules: true}))
 
 
 const direct = [
