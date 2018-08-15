@@ -1,4 +1,5 @@
 # rollup-plugin-jsy-babel
+[![Build Status](https://travis-ci.org/jsy-lang/rollup-plugin-jsy-babel.svg?branch=master)](https://travis-ci.org/jsy-lang/rollup-plugin-jsy-babel)
 
 Configuration for using [JSY](https://github.com/jsy-lang/jsy-lang-docs#readme) in [RollupJS](https://rollupjs.org) via [Babel](https://babeljs.io) 6.x.
 
