@@ -1,6 +1,6 @@
 import rpi_babel from 'rollup-plugin-babel';
 
-const jsy_preset = [ 'jsy/lean', { no_stage_3: true, modules: false } ];
+const jsy_preset = [ 'jsy/lean', { jsy_lite: true, no_stage_3: true, modules: false } ];
 jsy_babel.jsy_preset = jsy_preset;
 
 const default_config = { exclude: 'node_modules/**', babelrc: false };

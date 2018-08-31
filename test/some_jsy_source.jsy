@@ -11,7 +11,8 @@ function jsy_lite(config=default_config) ::
   const sourceMap = false !== config.sourceMap
 
   return @{}
-    name: 'jsy-lite',
+    name: 'jsy-lite'
+    echo: `jsy inside ${console.log @ typeof a_template} string`
     transform(code, id) ::
       if (! filter(id)) return
 
