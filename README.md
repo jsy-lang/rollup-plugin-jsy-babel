@@ -10,10 +10,7 @@ Configuration for using [JSY](https://github.com/jsy-lang/jsy-lang-docs#readme) 
 $ echo '{"private": true}' > package.json
 
 # install devDependencies for JSY and RollupJS
-$ npm install -D \
-    babel-core babel-cli \
-    rollup rollup-plugin-jsy-babel \
-    babel-preset-jsy
+$ npm install -D babel-core babel-cli rollup rollup-plugin-jsy-babel babel-preset-jsy
 ```
 
 ##### Add `rollup.config.js` with:
